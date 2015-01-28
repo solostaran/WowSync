@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- A simple project file to run the bean builder -->
+<project name="WowSync" default="gendoc" basedir=".">
+
+<!--  
+  <target name="dropbox" description="copy the .apk in the drop box directory">
+    <copy file="bin/JokeRank.apk" tofile="C:/Users/reynaud/Dropbox/Apps/JokeRank.apk" />
+  </target>
+  
+  <target name="logcat" description="launch the adb logcat command for JokeRank">
+    <exec executable="C:/Android/android-sdk/platform-tools/adb.exe" dir="C:/Android/android-sdk/platform-tools">
+      <arg value="logcat"/>
+      <arg value="JokeRankActivity:D"/>
+      <arg value="JokeRankDB:D"/>
+      <arg value="JokeRankSlide:D"/>
+      <arg value="*:E"/>
+    </exec>
+  </target>
+-->
+  
+  <target name="gendoc" description="generate the javadoc">
+    <javadoc sourcepath="src" destdir="doc" access="private" locale="fr_FR">
+      <classpath>
+        <pathelement location="bin" />
+        <pathelement location="lib/jdom.jar" />
+        <pathelement location="lib/jsch-0.1.43.jar" />
+      </classpath>
+      <link href="http://www.jdom.org/docs/apidocs/"/>
+      <package name="wowsync" />
+      <header>WowSync</header>
+      <bottom>Copyright &#169; 2011 - J.Reynaud - All Rights Reserved</bottom>
+    </javadoc>
+  </target>
+
+</project>

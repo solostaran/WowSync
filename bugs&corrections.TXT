@@ -1,0 +1,8 @@
+
+Symptome: Chemin de WoW erroné -> Exception
+Diagnostic: Mauvais test sur l'enumération.
+Solution: Ne pas faire != null sur le nextElement() mais tester directement avec hasMoreElements()
+ 
+Symptome: Ne restaure pas le chemin sur le serveur
+Diagnostic: La sauvegarde est faite, le modèle est correctement chargé, mais pas de mise à jour de l'UI
+Solution: Ajouter la mise à jour dans la méthode Model2UI
